@@ -1,0 +1,5 @@
+Element Number	Shear Elastic Strain (m/m)
+1	-1.3069e-005
+2	5.6475e-006
+3	6.3649e-007
+4	4.6228e-006

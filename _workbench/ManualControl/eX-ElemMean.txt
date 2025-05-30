@@ -1,0 +1,5 @@
+Element Number	Normal Elastic Strain (m/m)
+1	1.7162e-007
+2	-1.3165e-006
+3	3.5062e-007
+4	-2.4055e-007

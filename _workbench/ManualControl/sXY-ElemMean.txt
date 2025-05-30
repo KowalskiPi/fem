@@ -1,0 +1,5 @@
+Element Number	Shear Stress (Pa)
+1	-9.1893e+005
+2	3.9709e+005
+3	44753
+4	3.2504e+005
