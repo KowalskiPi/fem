@@ -1,0 +1,29 @@
+!   Commands inserted into this file will be executed immediately after the ANSYS /POST1 command.
+
+!   Active UNIT system in Workbench when this object was created:  Metric (m, kg, N, s, V, A)
+!   NOTE:  Any data that requires units (such as mass) is assumed to be in the consistent solver unit system.
+!                See Solving Units in the help system for more information.
+
+!Print the Full stiffness matrix
+*DMAT, KmatrixF, D, import, full, file.full, STIFF !fetching the full stiffness matrix from .FULL file
+*PRINT,KmatrixF,Kdense.txt !converting the file obtained into .txt format
+!print the sparse stiffness matrix
+*SMAT, KmatrixS, D, import, full, file.full, STIFF !fetching the sparse stiffness matrix from .FULL file
+*PRINT,KmatrixS,Ksparse.txt
+!print the nodal force matrix
+*DMAT, FmatrixF, D, import, full, file.full, RHS !fetching the full force matrix from .FULL file
+*PRINT,FmatrixF,FmatrixF.txt
+
+!Get the total number of elements
+
+*DO, i, 1, 6
+    *DMAT, KMatrixEBuffer, D, IMPORT, EMAT, 'file.emat', STIFF, i
+    *PRINT, KMatrixEBuffer, KMatrixE.txt     ! Print to the appended file (no filename specified)
+*ENDDO
+
+!Print the Full mass matrix
+*DMAT, MmatrixF, D, import, full, file.full, MASS !fetching the full mass matrix from .FULL file
+*PRINT,MmatrixF,Mdense.txt
+!print the sparse mass matrix
+*SMAT, MmatrixS, D, import, full, file.full, MASS !fetching the sparse mass matrix from .FULL file
+*PRINT,MmatrixS,Msparse.txt

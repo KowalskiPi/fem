@@ -1,0 +1,5 @@
+Element Number	Normal Stress (Pa)
+1	1.9282e+005
+2	-3.0718e+005
+3	55495
+4	-2.4288e+005
